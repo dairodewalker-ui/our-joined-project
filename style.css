@@ -131,3 +131,96 @@ footer {
         font-size: 25px;
     }
 }
+
+/* SMOOTH SCROLLING */
+html {
+    scroll-behavior: smooth;
+}
+
+/* NAVIGATION HOVER EFFECTS */
+nav a {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: white;
+    color: #1769aa;
+    transform: translateY(-3px);
+}
+
+/* SECTION HOVER EFFECTS */
+section {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* SECTION ENTRANCE ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: fadeIn 0.8s ease both;
+}
+
+/* BETTER LINK EFFECTS */
+main a {
+    color: #1769aa;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+main a:hover {
+    color: #102a43;
+    text-decoration: underline;
+}
+
+/* BETTER MOBILE NAVIGATION */
+@media (max-width: 600px) {
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 14px;
+    }
+}
+
+/* ACCESSIBILITY: RESPECT REDUCED MOTION */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    section {
+        animation: none;
+        transition: none;
+    }
+
+    nav a {
+        transition: none;
+    }
+}
+/* SMOOTH SCROLLING */
+html {
+    scroll-behavior: smooth;
+}
